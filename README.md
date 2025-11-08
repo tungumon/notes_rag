@@ -1,8 +1,10 @@
-# Tauri + React
+# Notes App
 
-This template should help get you started developing with Tauri and React in Vite.
+This Demonstrator shows the usage of RAG in a notes app. After installation, the user is able to write down notes, which are saved in a local DB. When saved, these notes are run through an embedding model, which creates a vector, which is also stored on the SQLite DB. Upon querying with natural language, the request is sent to the backend, which calls the DB and performs a cosine similarity search over the vectors in the DB.
 
-## Recommended IDE Setup
+# Tech Stack
+Frontend: React
+Backend: SQLite, Rust-Tauri, Ollama
 
-- [VS Code](https://code.visualstudio.com/) + [Tauri](https://marketplace.visualstudio.com/items?itemName=tauri-apps.tauri-vscode) + [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=rust-lang.rust-analyzer)
-"# notes_rag" 
+# Installation
+Clone the folder and execute npm install. Then run with npm run tauri dev. Make sure ollama is installed and configure the code in src-tauri/src/lib.rs to use the model on your machine. 
